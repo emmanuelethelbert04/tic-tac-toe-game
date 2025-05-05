@@ -1,0 +1,117 @@
+:root{
+  --text: rgb(221, 192, 111);
+  --bg: rgb(17, 17, 61);
+}
+body{
+  background-color: var(--bg);
+  color: var(--text);
+  width: 100%;
+  text-align: center;
+  margin-top: 100px;
+  overflow: hidden;
+}
+p{
+  margin: 0;
+  padding: 0;
+}
+
+/* .play-header{
+  font-size: 40px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-weight: 200;
+} */
+
+h3{
+  font-size: 80px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-family: 'Rubik Puddles', cursive;
+
+}
+.tic-tac-toe-grid-div{
+  /* display: grid;
+  grid-template-columns: 150px 150px 150px; */
+  width: 100vw;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(3, auto)
+
+}
+.box{
+  height: 100px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  color: var(--text);
+  font-family: 'Rubik Puddles', cursive;
+  font-size: 80px;
+  cursor: pointer;
+  position: relative;
+}
+
+/* remove border for edges */
+/* .box:nth-child(1), .box:nth-child(2), .box:nth-child(3) {
+	border-top: none;
+}
+
+.box:nth-child(1), .box:nth-child(4), .box:nth-child(7) {
+	border-left: none;
+}
+
+.box:nth-child(3), .box:nth-child(6), .box:nth-child(9) {
+	border-right: none;
+}
+
+.box:nth-child(7), .box:nth-child(8), .box:nth-child(9) {
+	border-bottom: none;
+}
+.box.x, .box.circle{
+  cursor: pointer;
+}
+.box.clicked{
+  cursor: not-allowed;
+} */
+
+
+/* .border-line{
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  border-left: 2px solid white;
+  border-top: 2px solid white;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+} */
+
+/* .border-line2{
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  border-top: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+} */
+
+button{
+  margin-top: 40px ;
+  padding: 10px 25px;
+  border-radius: 10px;
+  border: none;
+  font-size: 18px;
+  color: var(--bg);
+  transition: background 0.2s ease-in-out;
+  background-color: var(--text);
+}
+button:hover{
+  background-color: var(--bg);
+  border: 2px solid var(--text);
+  color: var(--text);
+}

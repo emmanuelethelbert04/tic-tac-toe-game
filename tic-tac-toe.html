@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="tic-tac-toe.css">
+  <title>Tic-Tac-Toe with player 1</title>
+</head>
+<body>
+  <!-- <p class="play-header">Play</p> -->
+  <h3 class="js-main-header">PLAY</h3>
+  <h4 class="js-header winnigMassage"></h4>
+  <div class="tic-tac-toe-grid-div board">
+    <div class="box" id="0"></div>
+    <div class="box" id="1"></div>
+    <div class="box" id="2"></div>
+    <div class="box" id="3"></div>
+    <div class="box" id="4"></div>
+    <div class="box" id="5"></div>
+    <div class="box" id="6"></div>
+    <div class="box" id="7"></div>
+    <div class="box" id="8"></div>
+  </div>
+
+  <button class="js-btn">Restart</button>
+
+
+  <script src="tic-tac-toe.js"></script>
+  
+  <!-- <script>
+    const player_x = 'X';
+    const player_o = 'circle';
+    const winning_combination = [
+      [0, 1, 2],
+      [3, 4, 5],
+      [6, 7, 8],
+      [0, 3, 6],
+      [1, 4, 7],
+      [2, 5, 8],
+      [0, 4, 8],
+      [2, 4, 6],
+    ];
+    const cellElement = document.querySelectorAll('[data-cell]');
+    const boardElement = document.querySelector('.board');
+    const winnigMassageElement = document.querySelector('.winningMessage');
+    const restartButton = document.querySelector('.js-btn');
+    let isPlayer_O_turn = false;
+
+    startGame()
+
+
+    function startGame(){
+      isPlayer_O_turn = false;
+      cellElement.forEach((cell) =>{
+        cell.classList.remove(player_x);
+        cell.classList.remove(player_o);
+        cell.removeEventListener('click', handleBoxClick);
+        cell.addEventListener('click', handleBoxClick, {once: true});
+      })
+    }
+    
+    function handleBoxClick(e){
+      const cell = e.target.data;
+      const currentPlayer = isPlayer_O_turn? player_o : player_x;
+      placeMark(cell, currentPlayer);
+      if(checkWin(currentPlayer)){
+        endGame(false);
+      }else if (isDraw()){
+        endGame(true);
+      }else{
+        swapTurns();
+      }
+    }
+    function endGame(draw){
+      if(draw){
+        winnigMassageElement.innerHTML = 'Its draw';
+  
+      }else{
+        winnigMassageElement.innerHTML = `player with ${isPlayer_O_turn ? "O's" : "X's"} wins`;
+      }
+      winnigMassageElement.classList.add('show')
+    }
+    
+    function isDraw(){
+      return[...boxElement].every((cell) =>{
+        return cell.classList.contains(player_x) || cell.classList.contains(player_o);
+      })
+    }
+
+    function placeMark(cell, currentPlayer){
+      cell.classList.add(currentPlayer);
+    }
+
+    function swapTurns(){
+      isPlayer_O_turn = !isPlayer_O_turn;
+    }
+
+    function checkWin(currentPlayer) {
+      return winning_combination.some(combination => {
+        return combination.every(index => {
+          return boxElement[index].classList.contains(currentPlayer)
+        })
+      })
+    }
+    function setBoardHoverClass() {
+      boardElement.classList.remove(player_x)
+      boardElement.classList.remove(player_o)
+      if (isPlayer_O_Turn) {
+        boardElement.classList.add(player_o)
+      } else {
+        boardElement.classList.add(player_x)
+      }
+    }
+  </script> -->
+</body>
+</html>

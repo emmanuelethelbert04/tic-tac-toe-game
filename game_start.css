@@ -1,0 +1,41 @@
+:root{
+  --color: rgb(221, 192, 111);
+  --bg: rgb(17, 17, 61);
+  --text: #fff;
+}
+body{
+  background-color: var(--bg);
+  color: var(--color);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top:200px;
+}
+h3{
+  font-size: 50px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-family: 'Rubik Puddles', cursive;
+
+}
+.btn-div{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.btn-div a{
+  text-decoration: none;
+  margin-right: 20px;
+  margin-top: 40px;
+  background-color: var(--color);
+  padding: 13px 45px;
+  color: var(--text);
+  font-size: 20px;
+  border-radius: 5px;
+  transition: opacity 0.5s ease-in-out; 
+}
+.btn-div a:hover{
+  opacity: 0.7;
+}
